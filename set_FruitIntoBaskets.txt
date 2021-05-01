@@ -1,0 +1,21 @@
+
+
+class Solution {
+public:
+    int totalFruit(vector<int>& tree) {
+        int res=0; // maximum fruits carried
+        int posFrtA=0,posFrtB=0,curr=0,origin=0;
+        while(curr<tree.size() && posFrtA<=curr && posFrtB<=curr){
+            //  iterate all items in "tree"
+            while(curr<tree.size() && (tree[curr]==tree[posFrtA] || tree[curr]==tree[posFrtB])){
+                // iterate untill between origin and end we've only 2 distinct trees
+                if(curr>0 && tree[curr]!=tree[curr-1]) origin=curr; //update origin for tree change
+                curr++; 
+            }
+            if(curr-posFrtA>res) res=curr-posFrtA;
+            posFrtB=curr; 
+            posFrtA=origin; // first tree setup at origin
+        }
+        return res;
+    }
+};

@@ -1,0 +1,15 @@
+培養與鍛鍊程式設計的邏輯腦
+
+
+https://www.youtube.com/watch?v=UxmlFsQFqx4
+https://www.youtube.com/watch?v=EdoyHZTfkT8
+https://www.youtube.com/watch?v=c2aAol0wZTk
+
+EDA
+https://www.youtube.com/watch?v=4QypuOnOQzg
+
+cin cout//print scanf
+https://chino.taipei/note-2016-0311C-%E7%9A%84%E8%BC%B8%E5%87%BA%E5%85%A5cin-cout%E5%92%8Cscanf-printf%E8%AA%B0%E6%AF%94%E8%BC%83%E5%BF%AB%EF%BC%9F/
+
+c++ vector  紅黑樹概念
+https://zh.wikipedia.org/wiki/Vector_(STL)

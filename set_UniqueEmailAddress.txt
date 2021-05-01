@@ -1,0 +1,65 @@
+//unique emails
+//before improving
+
+public class Solution {
+    public int NumUniqueEmails(string[] emails) {
+        int valideEmails = 0;
+        List<string> listEmails ;
+        string combineEmail;
+        foreach(string singleEmail in emails){
+            
+            string[] splitEmail = singleEmail.Split('@');
+            Console.WriteLine(singleEmail);
+            
+            //initial
+            combineEmail = "";
+            
+            foreach(string divideEmail in splitEmail){
+                Console.WriteLine(divideEmail);
+                
+                string forwardEmail = divideEmail.Replace(".","");
+                
+                forwardEmail = forwardEmail.Substring(0, forwardEmail.IndexOf("+")<0?forwardEmail.Length:forwardEmail.IndexOf("+"));
+                combineEmail = combineEmail + "@" + divideEmail
+                listEmails.Add
+                Console.WriteLine(forwardEmail);
+                Console.WriteLine("END");
+                //.忽略 +省略後面
+                //判斷是否存在
+            }
+        
+        }
+        return valideEmails;
+    }
+}
+
+//after improving
+class Solution {
+public:
+    int numUniqueEmails(vector<string>& emails) {
+        set<string> st;
+        for(auto &w :emails){
+            string temp = "";
+            for(int i= 0 ; i!= w.size() ; i++){
+                if(w[i] == '.') continue;
+                if(w[i] == '@'){
+                    temp += w.substr(i,w.size());
+                    cout<<temp<<endl;
+                    break;} 
+                if(w[i] == '+'){
+                    while(w[++i] != '@');
+                    cout<<temp + "-1"<<endl;
+                    temp += w.substr(i,w.size());
+                    cout<<temp + "-2"<<endl;
+                    
+                    break;
+                    
+                }
+                cout<<i<<endl;
+                temp.push_back(w[i]);
+            }
+            st.insert(temp);
+        }
+        return st.size();
+    }
+};
