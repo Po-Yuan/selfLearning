@@ -1,21 +1,28 @@
-
+//after improving by unordered_map
 
 class Solution {
 public:
     int totalFruit(vector<int>& tree) {
-        int res=0; // maximum fruits carried
-        int posFrtA=0,posFrtB=0,curr=0,origin=0;
-        while(curr<tree.size() && posFrtA<=curr && posFrtB<=curr){
-            //  iterate all items in "tree"
-            while(curr<tree.size() && (tree[curr]==tree[posFrtA] || tree[curr]==tree[posFrtB])){
-                // iterate untill between origin and end we've only 2 distinct trees
-                if(curr>0 && tree[curr]!=tree[curr-1]) origin=curr; //update origin for tree change
-                curr++; 
+        unordered_map<int,int> treemap;
+        int start = 0;
+        int result = 0;
+        for(int index = 0 ; index!= tree.size() ; index++){            
+            treemap[tree[index]] = treemap[tree[index]] + 1;
+            
+            if(treemap.size()>2){
+                treemap[tree[start]] = treemap[tree[start]] - 1;
+                if(treemap[tree[start]] == 0){
+                    treemap.erase(tree[start]);
+                }
+                start++;
             }
-            if(curr-posFrtA>res) res=curr-posFrtA;
-            posFrtB=curr; 
-            posFrtA=origin; // first tree setup at origin
+            result = max(result, index - start + 1);
         }
-        return res;
+        return result;
     }
 };
+df
+
+===========
+learning
+unordered_map和map皆為使用紅黑樹資料結構，差異在於unordered_map沒有排序的功能，所以在查詢中效率較佳，其採用key-value方式儲存資料，透過ordered_map，存放fruit種類和數量，當儲存種類超過兩種時候，逐漸遞減前面水果種類和數量(此時能採兩種水果的最大值已經記錄下來)，若有水果種類的數量為0時候，使用erase將其水果種類移除，直到水果種類為2或者程式結束。
