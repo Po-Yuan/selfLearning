@@ -1,0 +1,18 @@
+  // Place your key bindings in this file to overwrite the defaults
+  {
+    "key": "ctrl+u",
+    "command": "editor.action.transformToUppercase" //轉大寫
+  },
+  {
+    "key": "ctrl+l",
+    "command": "editor.action.transformToLowercase" //轉小寫
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "workbench.action.files.saveAll" //save all file
+  },
+  {
+    "key": "ctrl+k ctrl+d",
+    "command": "editor.action.formatDocument", //幫你排好版
+    "when": "editorTextFocus && !editorReadonly"
+  }

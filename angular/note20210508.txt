@@ -1,0 +1,21 @@
+download angular
+https://nodejs.org/zh-tw/download/
+
+STEP1:Easy Build Angular project
+step1:open npc
+1.npm -v //check version
+2.npm -g @angular/cli //download angular from google team -g global
+3.ng --version // check angular had been installed or not
+4.ng new HelloWorld //create new project
+5.ng serve --open //start angular program
+※if vscode show the error about that ng.ps didn't have signed, open the power and excute "Set-ExecutionPolicy RemoteSigned"
+
+open editor "VSC"
+tip:ctrl+shift+p open command 
+
+STEP2:install typescript
+1.npm install -g typescript //install typescript
+2.tsc --version //show the version of typescript
+3.code main.ts //add the file "main.ts"
+4.tsc main.ts // change typescript into javascript
+5.node main.js //show the result from main.js
