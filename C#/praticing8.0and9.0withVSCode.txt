@@ -1,0 +1,62 @@
+using System;
+using static System.Text.Encoder;
+
+
+namespace VSCode
+{
+    class Program
+    {        
+        static void Main(string[] args)
+        {
+            
+            // Console.WriteLine("Hello World!");
+            Proper();
+        }
+
+
+        static decimal ProgramSalesTax(Detail companyDetail, decimal salesPrice)=>
+            companyDetail switch 
+            {
+                //test C# 7.0 switch
+                {companyName:"complanyA"}=>salesPrice * 0.008m,                
+                {companyName:"complanyB", phone:"03-123456"}=>salesPrice * 0.005m,
+                {companyName:"complanyB"}=>salesPrice * 0.007m,
+                _=>0m
+            };
+        
+
+        static decimal Proper(){
+            //test C# 8.0 propty Pattern Matching
+            var salesPrice = 5000;  
+
+            Detail detail = new Detail(1, "complanyA", "05-123456789");            
+            consoleProgramDetail(detail,salesPrice);
+
+            detail = detail with {id=2, companyName = "complanyB", phone = "03-123456"};
+            consoleProgramDetail(detail, salesPrice);
+
+            detail = detail with{id=3, companyName = "complanyB"};
+            consoleProgramDetail(detail,salesPrice);
+
+            detail = detail with{id=3, companyName = "complanyB", phone ="04-654321"};
+            consoleProgramDetail(detail,salesPrice);
+
+
+            static void consoleProgramDetail(Detail companyDetail, decimal salesPrice)=>
+                Console.WriteLine($"companyID:{companyDetail.id},phone:{companyDetail.id},total:{ProgramSalesTax(companyDetail,salesPrice)}");
+                
+
+            return 10;
+        }
+        record Detail(
+            int id,
+            string companyName,
+            string phone
+        );
+            
+
+        
+    }
+    
+}
+
