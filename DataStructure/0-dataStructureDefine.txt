@@ -1,0 +1,15 @@
+there are two ways to change origin data to data sctrue.
+1.change point
+2.change the sort of the data in physically
+
+what is data struceture?
+the data structure is relationship between datas 
+example:two-binary tree or two-binary search tree or two-binary heap tree or delete n times
+
+why data structure is important?
+data structure could afford us more strategy to use the data
+
+
+what is algorithm?
+the strategy of using data(view/search/dynamic programing)
+example: pre-order traversal(quick sort) or post-order traversal(merge sort) or in-order traversal(tree sort) or search(binaryu search) or delete(heap sort)

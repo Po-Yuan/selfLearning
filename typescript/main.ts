@@ -1,3 +1,4 @@
+import {PointDistance} from './point'; // in angular use library name , such like @angular/core
 function log(message){
     console.log(message);
 }
@@ -27,7 +28,7 @@ interface Point{
     x: number,
     y: number
 }
-
+//use interface to keep clean code
 let drawPoint = (point : Point)=>{
     console.log('x:' + point.x);
     console.log('y:' + point.y);
@@ -37,8 +38,12 @@ drawPoint({
     y:2
 });
 
-let text = 'abc';
-// let endWithC = (<string>text).endsWith('c'); // return boolean and conver it to string
-// let endWithC = String(text.endsWith('c')) // return boolean and conver it to string
-// let endWithCOtherWay = String(text.endsWith('c')) // return boolean and conver it to string
+// the parameter and method are highly related, so we need to use class to make it together
+//use class attain cohesion between property and method
+
+let pointDistance : PointDistance = new PointDistance();  //init
+let pointDistanceWithValue : PointDistance = new PointDistance(1,2);  //init
+let x = pointDistance.X;
+pointDistance.X = 10;
+pointDistance.draw();
 

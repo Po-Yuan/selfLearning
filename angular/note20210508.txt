@@ -19,3 +19,5 @@ STEP2:install typescript
 3.code main.ts //add the file "main.ts"
 4.tsc main.ts // change typescript into javascript
 5.node main.js //show the result from main.js
+
+tip: use F2 to edit the value such like property name can modify all property name

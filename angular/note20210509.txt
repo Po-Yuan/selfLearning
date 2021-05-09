@@ -1,0 +1,37 @@
+angular main part:
+1.components : put in module
+2.templates : insert value into dynamic value
+3.director : ex: <li *ngFor=""></li>
+4.services
+
+component:data,html template, logic
+
+module:courses,messaging,instructor,admin
+
+Components:
+1.create a component
+2.register it in a module
+3.add an element in an html markup
+#name:{courses}.component.ts
+
+app.module.ts
+1.add component
+2.@NgModule->declarations->add component
+
+src/app/index.html is similar with asp.net core layout.html and it refereces to app.component.ts
+<app-root></app-root>
+
+USE CLI to Create component
+ng g c course  (ng generate component filename)
+1.add class
+service is better for unit test
+class TestService{
+	TryTest(){
+		return 'true';
+	}
+}
+2.import component
+import {TryTest} from './[classname without .ts]'
+
+3.add Service name into module provider
+provider:[TryTest]
