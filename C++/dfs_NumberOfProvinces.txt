@@ -1,0 +1,30 @@
+class Solution {
+public:    
+    void dfs(int city, vector<vector<int>>& isConnected, vector<bool> &check){
+        check[city] = true; //city is checked
+        
+        for(int i = 0 ; i != isConnected.size(); i++){
+            if(!check[i] && isConnected[city][i]){
+                dfs(i, isConnected, check);
+            }
+        }        
+    }    
+    int findCircleNum(vector<vector<int>>& isConnected) {
+        int res = 0;
+        vector<bool> check (isConnected.size(), false);
+        
+        for( int i = 0 ; i != isConnected.size() ; i++){
+            
+            if(!check[i]){                
+                cout<<i<<endl;
+                dfs(i, isConnected, check);
+                res += 1;
+            }
+        }
+        return res;
+    }
+};
+
+//using check[] to check which city is isolated
+//using deep-first search algorithm
+//search 0 and turn right to try to find 1 trying to find deep
