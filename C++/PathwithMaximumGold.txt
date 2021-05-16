@@ -1,0 +1,62 @@
+class Solution {
+public:
+    int res;
+    int total;
+    int getMaximumGold(vector<vector<int>>& grid) {
+        //find start without 0
+        //visit cell not 0
+        //select up down right left
+        
+        //make template for check
+        vector<vector<bool>> isCheck(grid.size()+1,vector<bool> (grid[0].size()+1,false));
+        
+        for(int i =0 ; i!= grid.size();i++){
+            for(int j =0; j!= grid[0].size();j++){
+                dfs(i, j, isCheck, grid);
+            }
+        }
+        return res;
+    }
+    
+    void dfs( int i,const int j, vector<vector<bool>> &isCheck, vector<vector<int>> &grid){
+        if(i<0 || j<0 || i>=grid.size() || j>=grid[0].size() || grid[i][j] == 0 || isCheck[i][j] == true){
+            //return cell out of boundary
+            //return cell is 0
+            //return cell is check
+            return;
+        }else{
+            isCheck[i][j]=true;
+            total += grid[i][j];
+            res = max(res,total);
+            
+                        
+            dfs(i-1,j,isCheck,grid);//up
+            dfs(i,j-1,isCheck,grid);//left
+            dfs(i+1,j,isCheck,grid);//down
+            dfs(i,j+1,isCheck,grid);//right
+            
+            isCheck[i][j]=false;//traceBack check
+            total-=grid[i][j];//trackBack value
+        }
+    }
+    
+};
+
+Question:
+Input: grid = [[0,6,0],[5,8,7],[0,9,0]]
+Output: 24
+Explanation:
+[[0,6,0],
+ [5,8,7],
+ [0,9,0]]
+Path to get the maximum gold, 9 -> 8 -> 7.
+
+Input: grid = [[1,0,7],[2,0,6],[3,4,5],[0,3,0],[9,0,20]]
+Output: 28
+Explanation:
+[[1,0,7],
+ [2,0,6],
+ [3,4,5],
+ [0,3,0],
+ [9,0,20]]
+Path to get the maximum gold, 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7.
