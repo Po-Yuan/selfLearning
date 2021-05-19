@@ -1,0 +1,65 @@
+class Solution {
+public:
+    int minDominoRotations(vector<int>& tops, vector<int>& bottoms) {
+        int tRes;
+        int bRes;
+        int res;
+        
+        tRes = getRotation(tops, bottoms);
+        bRes = getRotation(bottoms, tops);
+        
+        if(tRes==-1 && bRes==-1){
+            return -1;
+        }else{
+            res = max(tRes, bRes);
+        }
+        
+        
+        return res;
+    }
+    
+    int getRotation(vector<int>& tops, vector<int>&bottoms){        
+        int base = tops[0];
+        int bRotation=0;
+        int tRotation=0;
+        int res;
+        
+        for(int i=0;i!=tops.size();i++){
+            
+            if(base == tops[i]){
+                
+            }else{
+                tRotation++;
+            }
+            
+            if(base == bottoms[i]){
+                
+            }else{
+                bRotation++;
+            }
+            
+            if(base != tops[i] && base != bottoms[i]){
+                cout<<base<<endl;
+                cout<<tops[i]<<endl;
+                cout<<bottoms[i]<<endl;
+                cout<<i<<endl;
+                cout<<tops.size()<<endl;
+                return -1;
+            }
+        }
+        res = min(tRotation, bRotation);
+        return res;
+    }
+};
+
+Question:
+Input: tops = [2,1,2,4,2,2], bottoms = [5,2,6,2,3,2]
+Output: 2
+Explanation: 
+The first figure represents the dominoes as given by tops and bottoms: before we do any rotations.
+If we rotate the second and fourth dominoes, we can make every value in the top row equal to 2, as indicated by the second figure.
+
+Constraints:
+
+2 <= tops.length == bottoms.length <= 2 * 104
+1 <= tops[i], bottoms[i] <= 6
