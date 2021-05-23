@@ -1,0 +1,51 @@
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        vector<int> temp;
+        int index1 = 0;
+        int index2 = 0;
+        int tempindex =0;
+        
+        while(index1<m && index2<n){
+            if(nums1[index1] <= nums2[index2] && index1<m){
+                temp.push_back(nums1[index1]);
+                index1++;
+            }
+            if(nums1[index1]>nums2[index2] && index2<n){
+                temp.push_back(nums2[index2]);
+                index2++;            
+            }  
+        }
+        //the rest of sort must be bigger than another
+        while(index1<m){
+            temp.push_back(nums1[index1]);
+            index1++;
+        }
+        
+        while(index2<n){
+            temp.push_back(nums2[index2]);
+            index2++; 
+        }
+        
+        nums1.clear();
+        nums1.assign(temp.begin(),temp.end());
+    }
+};
+
+Example 1:
+
+Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+Output: [1,2,2,3,5,6]
+Example 2:
+
+Input: nums1 = [1], m = 1, nums2 = [], n = 0
+Output: [1]
+ 
+
+Constraints:
+
+nums1.length == m + n
+nums2.length == n
+0 <= m, n <= 200
+1 <= m + n <= 200
+-109 <= nums1[i], nums2[i] <= 109
