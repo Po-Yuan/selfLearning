@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int heightChecker(vector<int>& heights) {
+        int cnt=0;
+        int num =1; //default min
+        map<int,int> m;
+        for(int i =0 ;i!=heights.size();i++){
+            m[heights[i]]++;
+        }
+        
+        for(int i=0;i!=heights.size();i++){
+            while(m[num]==0) num++; //get min num in heights
+            if(num != heights[i]) cnt++;
+            m[num]--;
+        }
+        
+        return cnt;
+    }
+};
