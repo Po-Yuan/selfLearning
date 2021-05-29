@@ -1,0 +1,2 @@
+Model→Notify→ViewModel→Binding→ View
+     ←Update←         →  Even →

@@ -1,0 +1,21 @@
+It is important concept in swift. there is the apple explanation:
+IF there is no strong memory point to weak memory, it will be deleted or go away
+
+target: avoid out of memory
+
+weak var str = "weakmemory"
+weak var str : String = "weakmemory"
+
+all variable deafult type is strong memory
+
+e.g.
+
+class Child{
+	weak var balloon="str"
+}
+
+var joe = Child()
+
+without Joe, every thing is weak.
+
+==sample==
