@@ -1,0 +1,16 @@
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\bin\Debug\net5.0\checkLineOverlap.exe
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\bin\Debug\net5.0\checkLineOverlap.deps.json
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\bin\Debug\net5.0\checkLineOverlap.runtimeconfig.json
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\bin\Debug\net5.0\checkLineOverlap.runtimeconfig.dev.json
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\bin\Debug\net5.0\checkLineOverlap.dll
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\bin\Debug\net5.0\ref\checkLineOverlap.dll
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\bin\Debug\net5.0\checkLineOverlap.pdb
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\obj\Debug\net5.0\checkLineOverlap.csprojAssemblyReference.cache
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\obj\Debug\net5.0\checkLineOverlap.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\obj\Debug\net5.0\checkLineOverlap.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\obj\Debug\net5.0\checkLineOverlap.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\obj\Debug\net5.0\checkLineOverlap.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\obj\Debug\net5.0\checkLineOverlap.dll
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\obj\Debug\net5.0\ref\checkLineOverlap.dll
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\obj\Debug\net5.0\checkLineOverlap.pdb
+C:\Users\user\Documents\GitHub\selfLearning\C#\checkLineOverlap\obj\Debug\net5.0\checkLineOverlap.genruntimeconfig.cache
