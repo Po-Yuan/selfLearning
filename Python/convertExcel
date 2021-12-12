@@ -1,0 +1,16 @@
+from xhtml2pdf import pisa
+import pandas as pd
+
+xl = pd.ExcelFile("..\input\蕭博元2021.xlsx")
+df = xl.parse("20210808")
+
+
+df.dropna(how="all")
+df.dropna(how="all", axis="columns")
+df.fillna("")
+
+df.to_html('..\input\sheet.html', border=0)
+
+with open("..\input\sheet.html", "r") as htmlFile:
+    with open("..\input\sheet.pdf", "w+b") as resultFile:
+        pisaStatus = pisa.CreatePDF(htmlFile, dest=resultFile)

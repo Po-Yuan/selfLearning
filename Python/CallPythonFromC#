@@ -1,0 +1,13 @@
+Run Python Script from C#
+https://www.youtube.com/watch?v=g1VWGdHRkHs
+
+
+#using python win32com problem's solutions
+1.https://stackoverflow.com/questions/17177612/excel-access-denied-with-win32-python-pywin32
+fixed point: maybe mircrosoft's bug => add folder
+
+2.https://stackoverflow.com/questions/28195793/win32com-codes-not-working-on-iis
+fixed point: give certain comobject launcher that was used by iis app pools
+
+3.https://stackoverflow.com/questions/2532769/how-to-start-a-process-as-administrator-mode-in-c-sharp
+fixed point: process excuted by administrator
