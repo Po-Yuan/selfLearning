@@ -1,0 +1,9 @@
+from pdfrw import PdfWriter =
+from openpyxl import load_workbook
+
+
+import pandas as pd  =html
+import pdfkit
+
+from xhtml2pdf import pisa 
+import pandas as pd =html
