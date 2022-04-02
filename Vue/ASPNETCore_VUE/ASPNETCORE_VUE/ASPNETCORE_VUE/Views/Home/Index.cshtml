@@ -8,6 +8,45 @@
 <div class="text-center">
     <div id="app">
         {{ message }}
+        <p v-bind:id="customId">...</p>
+        <button v-bind:disabled="isBtnDisabled">click to disabled</button>
+        <button v-bind:hidden="isBtnHidden">click to disabled</button>
+        <select>
+            <option>Y</option>
+            <option v-bind:selected="isSelected">N</option>
+            <option>nothing</option>
+        </select>
+
+        <p><span>test v-model {{message}}</span></p>
+        <textarea v-bind:class="{'error': this.count === 6}" v-model="message"></textarea>
+        <br />
+        <input placeholder="input what you want to pick ..." v-model="picked" />
+        <input type="radio" value="1" v-model="picked" />
+        <input type="checkbox" value="2" v-model="picked" />
+        <br />
+
+        <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" value="John" v-model="checkedNames" />
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
+        <label for="mike">Mike</label>
+        <input type="checkbox" id="mary" value="Mary" v-model="checkedNames" />
+        <label for="mary">Mary</label>
+        <br />
+        <p>Checked names: {{ checkedNames }}</p>
+
+        @*test v-on*@
+        <p>Count: {{ this.count }}</p>
+        <button v-on:click="plus">Plus</button>
+        <br />
+        <p>test v show</p>
+        <div v-show="isShow">show:truthy</div>
+        <div v-show="notShow">show:falsy</div>
+        <br />
+        <div v-if="count ===6">show 6</div>
+        <div v-else-if="count ===7">show 7</div>
+        <div v-else>else</div>
     </div>
 </div>
 @*Vue 3.0*@
