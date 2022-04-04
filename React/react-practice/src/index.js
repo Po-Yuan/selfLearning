@@ -1,4 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-ReactDom.render(<>Hello moto</>, document.getElementById('root'));
+import MenuItem from './component/MenuItem.js';
+
+
+
+ReactDom.render(<>Hello moto <br/> <MenuItem >test children</MenuItem> </>, document.getElementById('root'));
