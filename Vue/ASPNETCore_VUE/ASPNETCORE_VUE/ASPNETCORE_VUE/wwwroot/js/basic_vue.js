@@ -1,11 +1,11 @@
-﻿//////Vue 3.0
-
-const { createApp, ref } = Vue;
+﻿const { createApp, ref, reactive } = Vue;
 console.log(createApp);
-const vm = createApp({
+const vm = Vue.createApp({
     setup() {
         const message = ref('Test Vue 3.0');
         const count = ref(0);
+        const today = new Date().toLocaleDateString();
+        const numbers = [1,2,3,4,5,6];
         return {
             message,
             customId: "item_01",
@@ -16,7 +16,18 @@ const vm = createApp({
             checkedNames: ['Jack'],
             count,
             isShow: true,
-            notShow:false
+            notShow: false,
+            lis: {
+                title: 'Vue 3',
+                username: 'Vue user',
+                time: today
+            },
+            numbers
+        }
+    },
+    data() {
+        return {
+            num : 1
         }
     },
     computed: {
@@ -25,6 +36,11 @@ const vm = createApp({
                 'border': this.count === 6 ? "red solid 2px" : "",
                 'color': this.count === 6 ? "red" : ""
             }
+        },
+        evenObject: () => {
+            console.log(this.num);
+            console.log(this.numbers);
+            return this.numbers;
         }
     },
     methods: {
@@ -33,6 +49,9 @@ const vm = createApp({
             console.log(event.target.tagName);
             console.log(this.count);
             this.count++;
+        },
+        minus(event) {
+            this.count--;
         }
     }
 }).mount('#app');

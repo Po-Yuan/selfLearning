@@ -35,10 +35,12 @@
         <label for="mary">Mary</label>
         <br />
         <p>Checked names: {{ checkedNames }}</p>
+        <h4>Use template with key to distingush new and old values</h4>
 
         @*test v-on*@
         <p>Count: {{ this.count }}</p>
         <button v-on:click="plus">Plus</button>
+        <button v-on:click="minus">minus</button>
         <br />
         <p>test v show</p>
         <div v-show="isShow">show:truthy</div>
@@ -47,8 +49,30 @@
         <div v-if="count ===6">show 6</div>
         <div v-else-if="count ===7">show 7</div>
         <div v-else>else</div>
+        @*test template*@
+        <template v-if="count === 6">
+            <label>show 6 group</label>
+            <input placeholder="with key prop" />
+            <input placeholder="not with key prop" />
+        </template>
+        <template v-else>
+            <label>show else template</label>
+            <label>show else group</label>
+        </template>
+        @*test v for*@
+        <template v-for="(val, key, index) in lis">
+            <li :id="index">{{index}} / {{key}} / {{val}}</li>
+        </template>
+        evenobject
+        <div v-for="number in evenObject">
+            {{number}}
+        </div>
+        @*<template v-for="number in evenObject">
+                <li>{{number}}</li>
+            </template>*@
     </div>
 </div>
+
 @*Vue 3.0*@
 <script src="https://unpkg.com/vue@next"></script>
 @*<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>   Vue2.0*@

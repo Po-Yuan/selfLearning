@@ -352,3 +352,4 @@ C:\Users\user\Documents\GitHub\selfLearning\Vue\ASPNETCore_VUE\ASPNETCORE_VUE\AS
 C:\Users\user\Documents\GitHub\selfLearning\Vue\ASPNETCore_VUE\ASPNETCORE_VUE\ASPNETCORE_VUE\obj\Debug\netcoreapp3.1\ASPNETCORE_VUE.dll
 C:\Users\user\Documents\GitHub\selfLearning\Vue\ASPNETCore_VUE\ASPNETCORE_VUE\ASPNETCORE_VUE\obj\Debug\netcoreapp3.1\ASPNETCORE_VUE.pdb
 C:\Users\user\Documents\GitHub\selfLearning\Vue\ASPNETCore_VUE\ASPNETCORE_VUE\ASPNETCORE_VUE\obj\Debug\netcoreapp3.1\ASPNETCORE_VUE.genruntimeconfig.cache
+C:\Users\user\Documents\GitHub\selfLearning\Vue\ASPNETCore_VUE\ASPNETCORE_VUE\ASPNETCORE_VUE\obj\Debug\netcoreapp3.1\Razor\Views\Home\ComponentVue.cshtml.g.cs
