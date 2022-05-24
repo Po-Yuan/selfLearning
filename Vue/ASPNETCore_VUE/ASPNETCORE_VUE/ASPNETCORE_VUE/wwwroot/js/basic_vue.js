@@ -5,7 +5,8 @@ const vm = Vue.createApp({
         const message = ref('Test Vue 3.0');
         const count = ref(0);
         const today = new Date().toLocaleDateString();
-        const numbers = [1,2,3,4,5,6];
+        const numbers = [1, 2, 3, 4, 5, 6];
+        const tableData = [];
         return {
             message,
             customId: "item_01",
@@ -22,12 +23,28 @@ const vm = Vue.createApp({
                 username: 'Vue user',
                 time: today
             },
-            numbers
+            numbers,
+            tableDatas: [{
+                name: 'name1',
+                cash: 100,
+                date: new Date().toLocaleDateString("zh-tw")
+            },
+            {
+                name: 'name2',
+                cash: 200,
+                date: Date.now()
+            },
+            {
+                name: 'name3',
+                cash: 300,
+                date: Date.now()
+            }
+            ]
         }
     },
     data() {
         return {
-            num : 1
+            num : 10
         }
     },
     computed: {
@@ -45,13 +62,14 @@ const vm = Vue.createApp({
     },
     methods: {
         plus(event) {
-            console.log(event);
-            console.log(event.target.tagName);
-            console.log(this.count);
+            //console.log(event);
+            //console.log(event.target.tagName);
+            //console.log(this.count);
             this.count++;
         },
         minus(event) {
             this.count--;
+            console.log(this.num);
         }
     }
 }).mount('#app');
@@ -66,3 +84,16 @@ const vm = Vue.createApp({
 //});
 
 //vm.$mount('#app');
+
+//function component test
+document.addEventListener("DOMContentLoaded", () => {
+    function test() {
+        alert('test01');
+        this.test02 = () => {
+            alert('alert02')
+        }
+    }
+    const func = new test();
+    func.test02();
+
+})
