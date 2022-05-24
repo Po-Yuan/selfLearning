@@ -81,7 +81,6 @@
 </html>
 
 <script type="text/javascript">
-    console.log('test');
     document.addEventListener("DOMContentLoaded",()=>{
         const allItems = [...document.querySelectorAll("[data-sn]")];
         const back = document.querySelector("[data-back]");
@@ -94,7 +93,7 @@
         })
 
         next.addEventListener("click", ()=>{
-            if (count == 5) return;
+            if (count == 4) return;
             allItems[++count].classList.add("Active");
         })
 
