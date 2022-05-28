@@ -1,7 +1,48 @@
 ﻿const { createApp, ref, reactive } = Vue;
 console.log(createApp);
 const vm = Vue.createApp({
-    setup() {
+    //setup() {
+    //    const message = ref('Test Vue 3.0');
+    //    const count = ref(0);
+    //    const today = new Date().toLocaleDateString();
+    //    const numbers = [1, 2, 3, 4, 5, 6];
+    //    const tableData = [];
+    //    return {
+    //        message,
+    //        customId: "item_01",
+    //        isBtnDisabled: true,
+    //        isBtnHidden: false,
+    //        isSelected: true,
+    //        picked: 1,
+    //        checkedNames: ['Jack'],
+    //        count,
+    //        isShow: true,
+    //        notShow: false,
+    //        lis: {
+    //            title: 'Vue 3',
+    //            username: 'Vue user',
+    //            time: today
+    //        },
+    //        numbers,
+    //        tableDatas: [{
+    //            name: 'name1',
+    //            cash: 100,
+    //            date: new Date().toLocaleDateString("zh-tw")
+    //        },
+    //        {
+    //            name: 'name2',
+    //            cash: 200,
+    //            date: Date.now()
+    //        },
+    //        {
+    //            name: 'name3',
+    //            cash: 300,
+    //            date: Date.now()
+    //        }
+    //        ]
+    //    }
+    //},
+    data() {
         const message = ref('Test Vue 3.0');
         const count = ref(0);
         const today = new Date().toLocaleDateString();
@@ -18,6 +59,7 @@ const vm = Vue.createApp({
             count,
             isShow: true,
             notShow: false,
+            num: 10,
             lis: {
                 title: 'Vue 3',
                 username: 'Vue user',
@@ -40,11 +82,6 @@ const vm = Vue.createApp({
                 date: Date.now()
             }
             ]
-        }
-    },
-    data() {
-        return {
-            num : 10
         }
     },
     computed: {

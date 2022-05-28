@@ -1,0 +1,53 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <script src="https://unpkg.com/vue@next"></script>
+    <title></title>
+    
+</head>
+<body>
+    <div id="app">
+        <div>{{ price }}</div>
+        <div>{{ subtotal() }}</div>
+        <div>{{ testSetTotal() }}</div>
+        <div>{{ computedSetTotal }}</div>
+        <button v-on:click="addPrice()">add 100</button>
+        <button v-on:click="addNum()">add 1</button>
+    </div>
+</body>
+</html>
+
+<script>
+    const vm = Vue.createApp({
+        setup() {
+            return {
+                setNum:500
+            }
+        },
+        data() {
+            return {
+                price: 100,
+                num: 5
+            }
+        },
+        methods: {
+            subtotal: function () {
+                return this.price * this.num
+            },
+            testSetTotal: function () {
+                return this.setNum * this.num
+            },
+            addPrice: function () {
+                this.price += 100;
+            },
+            addNum: function () {
+                this.num += 1;
+            }
+        },
+        computed: {
+            computedSetTotal: function () {
+                return this.setNum * this.num;
+            }
+        }
+    }).mount('#app');
+</script>

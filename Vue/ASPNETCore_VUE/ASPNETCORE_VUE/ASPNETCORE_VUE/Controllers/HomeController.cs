@@ -33,6 +33,11 @@ namespace ASPNETCORE_VUE.Controllers
             return View();
         }
 
+        public IActionResult VueTest()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
